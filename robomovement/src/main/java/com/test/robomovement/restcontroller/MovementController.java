@@ -60,19 +60,19 @@ public class MovementController {
 		return true;
 	}
 	
-	private String convertLeftString(String test) {
+	private String convertLeftString(String directionCode) {
 		String directionText = "NESW";
-		String firstHalf = directionText.substring(0, directionText.indexOf(test)+1);
-		String secondHalf = directionText.substring(directionText.indexOf(test)+1, directionText.length());
+		String firstHalf = directionText.substring(0, directionText.indexOf(directionCode)+1);
+		String secondHalf = directionText.substring(directionText.indexOf(directionCode)+1, directionText.length());
 		return (new StringBuilder(firstHalf).reverse().toString())+(new StringBuilder(secondHalf).reverse().toString());
 	}
 
-	private String convertRightString(String test) {
+	private String convertRightString(String directionCode) {
 		String directionText = "NESW";
 		StringBuilder directionBuilder = new StringBuilder();
 		directionBuilder.append(directionText);
 		
-		return directionBuilder.substring(directionBuilder.indexOf(test))+directionText.substring(0, directionBuilder.indexOf(test));
+		return directionBuilder.substring(directionBuilder.indexOf(directionCode))+directionText.substring(0, directionBuilder.indexOf(directionCode));
 	
 	}
 	
