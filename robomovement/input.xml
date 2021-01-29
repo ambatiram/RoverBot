@@ -1,1 +1,1 @@
-<MovementInput><position><direction>N</direction><x>10</x><y>10</y></position><move><move><o>1</o><l>90</l><r/><f>10</f><b/></move><move><o>2</o><l/><r>180</r><f/><b>20</b></move></move></MovementInput>
+<MovementInput><position><direction>N</direction><x>10</x><y>10</y></position><move><move><o>1</o><l>90</l><r/><f>10</f><b/></move><move><o>2</o><l/><r>90</r><f/><b>20</b></move></move></MovementInput>

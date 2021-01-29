@@ -87,21 +87,25 @@ public class MovementController {
 		for(Move move : sortedMoves) {
 			if(move.getL() != null) {
 				String [] directionChars = convertLeftString(currentDirection).split("");
-				currentDirection = directionChars[ (int)Math.round((  ((double)move.getL() % 360) / 90)) % 8 ];
+				currentDirection = directionChars[ (int)Math.round((  ((double)move.getL() % 360) / 90)) % 4 ];
 
 				if(move.getF() != null) {
 					currentX = currentX - move.getF();
+					currentY = currentY + move.getF();
 				}else if(move.getB() != null) {
 					currentY = currentY + move.getB();
+					currentX = currentX + move.getB();
 				}
 			}else if(move.getR() != null) {
 				String [] directionChars = convertRightString(currentDirection).split("");
-				currentDirection = directionChars[ (int)Math.round((  ((double)move.getR() % 360) / 90)) % 8 ];
+				currentDirection = directionChars[ (int)Math.round((  ((double)move.getR() % 360) / 90)) % 4 ];
 				
 				if(move.getB() != null) {
 					currentX = currentX - move.getB();
+					currentY = currentY + move.getB();
 				}else if(move.getF() != null) {
 					currentY = currentY + move.getF();
+					currentX = currentX - move.getF();
 				}
 			}
 		}
